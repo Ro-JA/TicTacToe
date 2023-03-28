@@ -19,8 +19,8 @@ class NumberQuestion(
     val difficulty: String
 )
 
-// Создадим класс с универсальным типом данных generic
-class Question<T> (
+// Создадим дата  класс с универсальным типом данных generic
+data class Question<T> (
     val  questionText: String,
     val answer: T,
     val difficulty: Difficulty
@@ -31,4 +31,10 @@ data class Box(val height: Int, val length: Int, val width: Int) {
     override fun toString(): String {
         return "Box(height=$height, width=$width, size=$size)"
     }
+}
+
+// класс с одним экземпляром обекта singleton
+object StudentProgress {
+    val total: Int = 10
+    val answer: Int =3
 }
