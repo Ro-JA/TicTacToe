@@ -4,21 +4,21 @@
 
 data class Box2(val height: Int, val length: Int, val width: Int)
 
-fun main() {
-    val(height, length1, length2, width) = IntArray(4) { readln().toInt() }
+//fun main() {
+//    val(height, length1, length2, width) = IntArray(4) { readln().toInt() }
+//
+//    val box1 = Box2(height, length1, width)
+//    val box2 = box1.copy(length = length2)
+//
+//    println(box1)
+//    println(box2)
+//}
 
-    val box1 = Box2(height, length1, width)
-    val box2 = box1.copy(length = length2)
-
-    println(box1)
-    println(box2)
-}
 
 
-
-fun main() {
-    Quiz().printProgressBar()
-}
+//fun main() {
+//    Quiz().printProgressBar()
+//}
 
 // Создаем интерфейс для пичатания прогресса
 interface ProgressPrintable {
@@ -66,8 +66,6 @@ fun Quiz.StudentProgress.printProgressBar() {
     repeat(Quiz.answer) {print("▓") }
     repeat(Quiz.total - Quiz.answer) { print( "▒")}
 }
-*/
-/*
 class Triangle {
     val angles: Int = 3
     val scale: Double = 1.0
@@ -92,10 +90,9 @@ interface Shape {
     val scale: Double
     fun draw() { }
 
-}*/
+}
 
 // Do not change the code below.
-/*
 
 data class Vector2(var x: Int, var y: Int)
 
@@ -151,8 +148,6 @@ class YourMovingObject(
         direction = newDirection
     }
     }
-*/
-/*
 
 interface Animal {
     val numberOfLimbs: Int
@@ -184,8 +179,7 @@ class Dog : Animal {
         return "bark"
 
     }
-}*/
-/*
+}
 
 fun printQuiz() {
     println(question1.questionText)
@@ -200,4 +194,5 @@ fun printQuiz() {
     println(question3.answer)
     println(question3.difficulty)
     println()
-}*/
+}
+*/

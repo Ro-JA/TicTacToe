@@ -1,3 +1,4 @@
+/*
 // класс для заполнения бланка ответов
 class FillInTheBlankQuestion(
     val questionText: String,
@@ -48,3 +49,4 @@ data class Box(val height: Int, val length: Int, val width: Int) {
     }
 }
 
+*/
