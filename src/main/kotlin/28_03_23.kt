@@ -36,15 +36,15 @@ data class Box(val height: Int, val length: Int, val width: Int) {
 
 
 //создадим класс викторина для соопутствующего обекта
-// class Quiz {
-//    val question1 = Question<String>("Quoth the raven ___", "nevermore", Difficulty.MEDIUM)
-//    val question2 = Question<Boolean>("The sky is green. True or false", false, Difficulty.EASY)
-//    val question3 = Question<Int>("How many days are there between full moons?", 28, Difficulty.HARD)
-//
-//    // класс с одним экземпляром обекта singleton
-//    companion object StudentProgress {
-//        val total: Int = 10
-//        val answer: Int = 3
-//    }
-//}
+ class Quiz {
+    val question1 = Question<String>("Quoth the raven ___", "nevermore", Difficulty.MEDIUM)
+    val question2 = Question<Boolean>("The sky is green. True or false", false, Difficulty.EASY)
+    val question3 = Question<Int>("How many days are there between full moons?", 28, Difficulty.HARD)
+
+    // класс с одним экземпляром обекта singleton
+    companion object StudentProgress {
+        val total: Int = 10
+        val answer: Int = 3
+    }
+}
 
