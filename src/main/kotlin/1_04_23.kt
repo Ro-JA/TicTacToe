@@ -15,4 +15,18 @@ fun main() {
     for (planet in solarSystem ) {
         println(planet)
     }
+    solarSystem[3] = "Future Moon"
+    for (planet in solarSystem ) {
+        println(planet)
+    }
+    solarSystem.removeAt(9)
+    solarSystem.remove("Mercury")
+    println()
+    for (planet in solarSystem ) {
+        println(planet)
+    }
+    println()
+    println ("Future Moon" in solarSystem )
+
+
 }

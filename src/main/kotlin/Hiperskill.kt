@@ -1,3 +1,4 @@
+/*
 class City(val name: String) {
     var degrees: Int = 5
         set(value) {
@@ -21,4 +22,12 @@ fun main() {
     //implement comparing here
     val temperatureInCity =
     print("")
+}*/
+fun main() {
+    val listChar = readln().toMutableList()
+    println("---------")
+    println("| ${listChar[0]} ${listChar[1]} ${listChar[1]} |")
+    println("| ${listChar[3]} ${listChar[4]} ${listChar[5]} |")
+    println("| ${listChar[6]} ${listChar[7]} ${listChar[8]} |")
+    println("---------")
 }
