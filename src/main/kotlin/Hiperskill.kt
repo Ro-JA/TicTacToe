@@ -24,10 +24,52 @@ fun main() {
     print("")
 }*/
 fun main() {
-    val listChar = readln().toMutableList()
-    println("---------")
-    println("| ${listChar[0]} ${listChar[1]} ${listChar[1]} |")
-    println("| ${listChar[3]} ${listChar[4]} ${listChar[5]} |")
-    println("| ${listChar[6]} ${listChar[7]} ${listChar[8]} |")
-    println("---------")
+    val name = readln()
+    val age = readln().toInt()
+    val balance = readln().toInt()
+    val name2 = readln()
+    val age2 = readln().toInt()
+    val balance2 = readln().toInt()
+    val client = Client(name, age, balance)
+    val client2 = Client(name2, age2, balance2)
+    println(client == client2)
+
+}
+
+data class Client(val name: String, val age: Int, val balance: Int) {
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Client
+
+        if (name != other.name) return false
+        if (age != other.age) return false
+
+        return true
+    }
+
+}
+
+class Kitty() {
+    var color: String = "black"
+    var age: Int = 1
+
+    constructor(_color: String) : this() {
+        color = _color
+    }
+
+    constructor(_age: Int) : this() {
+        age = _age
+    }
+
+    constructor(_age: Int, _color: String) : this() {
+        color = _color
+        age = _age
+    }
+
+    constructor(_color: String, _age: Int) : this() {
+        color = _color
+        age = _age
+    }
 }
