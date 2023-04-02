@@ -22,7 +22,8 @@ fun main() {
     //implement comparing here
     val temperatureInCity =
     print("")
-}*/
+}*//*
+
 fun main() {
     val name = readln()
     val age = readln().toInt()
@@ -72,4 +73,4 @@ class Kitty() {
         color = _color
         age = _age
     }
-}
+}*/
