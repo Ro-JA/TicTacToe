@@ -8,6 +8,7 @@ class EspressoMachine1() {
     ) : this() {
         this.costPerServing = totalCost / coffeeCapsulesCount
     }
+
     constructor(
         coffeeBeansWeight: Float,
         totalCost: Float
@@ -31,10 +32,29 @@ data class EspressoMachine2(var costPerServing: Float = 0.0f) {
 // работа с set списками
 // возрощает set список из mutableList списка
 fun solution(strings: MutableList<String>): Set<String> = strings.toSet()
+
 //Обеденяет два set списка в один
 fun solution(first: Set<String>, second: Set<String>): Set<String> = first + second
+
 //Возрощает true если есть элементы из изменяемого списка
 fun solution(first: Set<String>, second: MutableList<String>): Boolean = first.containsAll(second)
 
 // работа со списками
+// програмка считывает список и выводит индекс максимального значения
+fun main() {
+ outputsTheIndexOfTheMaximumValue2()
+}
 
+fun outputsTheIndexOfTheMaximumValue() {
+    val size = readln().toInt()
+    val mutList: MutableList<Int> = mutableListOf()
+    for (i in   1..size) {
+        mutList.add(readln().toInt())
+    }
+    println(mutList.indexOf(mutList.maxOrNull()))
+}
+
+fun outputsTheIndexOfTheMaximumValue2() {
+    val mList = MutableList(readln().toInt()) { readln().toInt() }
+    println(mList.indexOf(mList.maxOrNull()))
+}
