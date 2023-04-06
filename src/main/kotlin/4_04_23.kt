@@ -42,13 +42,17 @@ fun solution(first: Set<String>, second: MutableList<String>): Boolean = first.c
 // работа со списками
 // програмка считывает список и выводит индекс максимального значения
 fun main() {
- outputsTheIndexOfTheMaximumValue2()
+
+
+   checkValueList()
+
+
 }
 
 fun outputsTheIndexOfTheMaximumValue() {
     val size = readln().toInt()
     val mutList: MutableList<Int> = mutableListOf()
-    for (i in   1..size) {
+    for (i in 1..size) {
         mutList.add(readln().toInt())
     }
     println(mutList.indexOf(mutList.maxOrNull()))
@@ -57,4 +61,12 @@ fun outputsTheIndexOfTheMaximumValue() {
 fun outputsTheIndexOfTheMaximumValue2() {
     val mList = MutableList(readln().toInt()) { readln().toInt() }
     println(mList.indexOf(mList.maxOrNull()))
+}
+
+fun checkValueList() {
+    val number = MutableList(readln().toInt()) { readln() }
+    val (a, b) = readln().split(" ")
+    if (number.contains(a) && number.contains(b)) {
+        println("")
+    }
 }
