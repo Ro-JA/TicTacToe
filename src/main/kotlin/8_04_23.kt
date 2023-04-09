@@ -1,9 +1,16 @@
 /*
 // програма по свойствам выдает самый холдный город
 class City(val name: String) {
-    var degrees: Int = 5
+    var degrees: Int = 0
         set(value) {
-            if(value in -92..57)
+            if(value < -92 && value > 57) {
+                field = when (name) {
+                    "Dubai" -> 30
+                    "Moscow" -> 5
+                    "Hanoi" -> 20
+                    else -> 0
+                }
+            }
         }
 }
 
@@ -18,8 +25,8 @@ fun main() {
     val thirdCity = City("Hanoi")
     thirdCity.degrees = third
 
-    //implement comparing here
-
+    val minTemperate = mutableListOf<City>(firstCity, secondCity, thirdCity)
+    println(minTemperate.minOfOrNull {it.degrees})
 
 }*/
 /*
@@ -28,3 +35,6 @@ fun main() {
     val characters = mutableListOf('a', 'z', 'e', 'd')
     println(characters.joinToString())
 }*/
+
+
+
