@@ -1,6 +1,6 @@
 //сортировка пузыркем
 fun main() {
-    val array = intArrayOf(1,5,3,9,10,2,4,6,8,11)
+    val array = intArrayOf(1,5,3,9,10,2,4,6,8,11,7)
     println(array.toList())
     array.bubbleSort()
     println(array.toList())
@@ -9,6 +9,7 @@ fun main() {
 private fun IntArray.bubbleSort() {
     var sort = false // флаг для окончания сортировки
     while (!sort) {
+        sort =true
         for(i in 1 until this.size) {
             val previous = this[i - 1]
             val current = this[i]
@@ -19,7 +20,7 @@ private fun IntArray.bubbleSort() {
         }
     }
 }
-
+// функция для смены местами значений
 private fun IntArray.swap(index1: Int, index2: Int) {
     val buffer = this[index1]
     this[index1] = this[index2]
