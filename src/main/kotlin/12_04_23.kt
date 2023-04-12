@@ -2,9 +2,13 @@
 import java.util.Scanner
 
 fun main() {
-    val numbers = readln().split(" ").map { it.toInt() }.toTypedArray()
-    val list = mutableListOf<Int>(*numbers)
-    val max = list.maxOrNull()
-    val index = list.indexOf(max)
-    println("$max ${index + 1}")
+    val scanner = Scanner(System.`in`)
+    val numList: MutableList<Int> = mutableListOf<Int>()
+    while (scanner.hasNext()) {
+        val num = scanner.nextInt()
+        numList.add(num)
+    }
+    val maxNum = numList.maxOrNull()
+    val indexNum = numList.indexOf(maxNum)
+    println("$maxNum ${indexNum + 1}")
 }
