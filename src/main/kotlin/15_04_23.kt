@@ -6,11 +6,5 @@ fun main() {
 }
 
     fun solution(products: List<String>, product: String) {
-        if (product.contains(product)) {
-            for (index in products.indices) {
-                if (products[index] == product) {
-                    print("$index ")
-                }
-            }
-        }
+       print(products.indices.filter { products[it] == product }.joinToString(" "))
     }
