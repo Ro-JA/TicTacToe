@@ -17,4 +17,4 @@ fun main() {
         println(list.joinToString(" "))
     }
 }
-fun solution(strings: List<String>, str: String): Int = strings.count { it == str }
+fun solution1(strings: List<String>, str: String): Int = strings.count { it == str }
