@@ -6,8 +6,15 @@
         println(numbers.joinToString())
     }*/
 fun main() {
-    val totalPrice = cookies.fold(0.0) { total, cookie ->
+  /*  val totalPrice = cookies.fold(0.0) { total, cookie ->
         total + cookie.price
     }
-    println("Total price: $${totalPrice}")
+    println("Total price: $${totalPrice}")*/
+    val alphabeticalMenu = cookies.sortedBy {
+        it.name
+    }
+    println("Alphabetical Menu:")
+    alphabeticalMenu.forEach() {
+        println("${it.name}")
+    }
 }
