@@ -35,12 +35,17 @@ fun main() {
     val events = mutableListOf<Event>(event1, event2, event3, event4, event5, event6)
     val shortEvents = events.filter { it.durationInMinutes <= 60 }
     println("You have ${shortEvents.size} short events.")
-    val morningEvent = events.filter { it.daypart == Daypart.MORNING }
+  /*  val morningEvent = events.filter { it.daypart == Daypart.MORNING }
     val afternoonEvent = events.filter { it.daypart == Daypart.AFTERNOON }
     val eveningEvent = events.filter { it.daypart == Daypart.EVENING }
     println("Morning: ${morningEvent.size} events")
     println("Afternoon: ${afternoonEvent.size} events")
-    println("Evening: ${eveningEvent.size} events")
+    println("Evening: ${eveningEvent.size} events")*/
+    val groupEvent = events.groupBy { it.daypart }
+    groupEvent.forEach {
+        (daypart, events) ->
+        println("${daypart}: ${events.size} event")
+    }
 }
 
 
