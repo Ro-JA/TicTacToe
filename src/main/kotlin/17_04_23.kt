@@ -24,6 +24,12 @@ data class Event(
     val daypart: Daypart,
     val durationInMinutes: Int,
 )
+val Event.durationOfEvent: String
+    get() = if (this.durationInMinutes < 60) {
+        "short"
+    } else {
+        "long"
+    }
 enum class Daypart { MORNING, AFTERNOON, EVENING, }
 fun main() {
     val event1 = Event(title = "Wake up", description = "Time to get up", daypart = Daypart.MORNING, durationInMinutes = 0)
@@ -47,13 +53,7 @@ fun main() {
         println("${daypart}: ${events.size} event")
     }
     println("Last event of the day: ${events.last().title}")
-
-    val durationOfEvent = if (events[0].durationInMinutes < 60) {
-        "short"
-    } else {
-        "long"
-    }
-    println("Duration of first event of the day: $durationOfEvent")
+    println("Duration of first event of the day: ${events[0].durationOfEvent}")
 }
 
 
