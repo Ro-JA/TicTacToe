@@ -24,9 +24,6 @@ fun main() {
     secondCity.degrees = second
     val thirdCity = City("Hanoi")
     thirdCity.degrees = third
-    println(firstCity.degrees)
-    println(secondCity.degrees)
-    println(thirdCity.degrees)
     if (firstCity.degrees < secondCity.degrees && firstCity.degrees < thirdCity.degrees) {
         println(firstCity.name)
     } else if (secondCity.degrees < firstCity.degrees && secondCity.degrees < thirdCity.degrees) {
