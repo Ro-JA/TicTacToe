@@ -24,6 +24,7 @@ data class Event(
     val daypart: Daypart,
     val durationInMinutes: Int,
 )
+// расширение класса без изменения новым свойством
 val Event.durationOfEvent: String
     get() = if (this.durationInMinutes < 60) {
         "short"
