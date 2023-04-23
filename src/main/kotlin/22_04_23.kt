@@ -6,5 +6,4 @@ class Fabric(var color: String) {
         println("$color fabric is created")
     }
 
-
 }
